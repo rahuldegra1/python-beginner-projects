@@ -20,5 +20,9 @@ Learned: menu-driven input, rounding output with round(), structuring multiple c
 Play rock-paper-scissors against the computer, with score tracking across rounds.
 Learned: random.choice() for random selection from a list, nested if/elif for win logic, .lower() for case-insensitive comparison, tracking multiple counters (wins/losses/ties) tied to specific outcomes.
 
+### contact_book.py — Contact Book
+Menu-driven contact manager: add, view, delete, and quit. Contacts stored as dictionaries inside a list.
+Learned: lists of dictionaries, looping with .items(), building dictionaries from user input, searching and removing items from a list, for...else for "not found" handling.
+
 ## What I'm learning next
-Writing my own functions (def) to make code reusable instead of one long script.
+String methods (.split(), .strip(), .replace(), etc.) and more list/dictionary practice.
