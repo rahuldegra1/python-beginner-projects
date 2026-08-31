@@ -1,26 +1,14 @@
-
-question1 = { 
-    "question": "What is the chemical symbol for gold on the periodic table?",
-    "options": ["Ag", "Au", "Pb", "Fe"],
-    "answer": "Au"
-}
-question2 = { 
-    "question": "What is the capital city of Australia?",
-    "options": ["sydney", "Melbourne", "delhi", "canberra"],
-    "answer": "canberra"
-}
-question3 = { 
-    "question": "Excluding the polar regions, which is the largest desert in the world?",
-    "options": ["gobi desert", "arabian desert", "sahara desert", "kalahari desert"],
-    "answer": "sahara desert"
-}
-question4 = { 
-    "question": "Which acclaimed director is known for his work on the mind-bending films Inception, Interstellar, and Oppenheimer?",
-
-    "options": ["steave spielberg", "quentin tarantino", "martin scorsese", "christopher nolan"],
-    "answer": "christopher nolan"
-}
-questions = [question1, question2, question3, question4]
+import csv 
+questions = []
+with open("questions.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        formatted_question = {
+            "question": row["Question"],
+            "options": [row["Opt1"], row["Opt2"], row["Opt3"], row["Opt4"]],
+            "answer": row["Answer"]
+        }
+        questions.append(formatted_question)
 score = 0
 
       
