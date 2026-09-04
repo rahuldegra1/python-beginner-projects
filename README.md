@@ -71,16 +71,25 @@ Each project below follows the same reflection format: **what it does, why I bui
 
 ---
 
+### Binary Search
+**What it does:** Searches a sorted list for a target number by repeatedly checking the middle element and cutting the remaining search range in half, instead of scanning item by item.
+
+**Why I built it:** To implement a classic algorithm from scratch and understand why it runs in O(log n) instead of O(n) — a search that stays fast even as the list grows enormously (roughly 10 comparisons for 1,000 items, ~20 for a million, ~30 for a billion).
+
+**What I'd do differently:** My first version compared `mid` (a list position) directly to the target value, instead of comparing `list[mid]` (the value stored at that position) — so it never actually found anything that wasn't sitting at the exact position the math landed on. Fixed by indexing into the list with `list[mid]` on every comparison. Next time, I'd write it as a reusable function that takes any sorted list and target, instead of a fixed script.
+
+---
+
 ## 🧠 Core Skills Demonstrated
 
 *   **File Handling (I/O):** Reading and writing external data using Python's `csv` module and plain text files.
 *   **Data Structures:** Lists, nested dictionaries, and 1D-to-2D grid mapping.
 *   **Control Flow:** Game loops built with `for` loops, `while` loops, `if/elif/else`, and a `for...else` search pattern.
 *   **Input Validation:** `try/except` blocks to catch invalid input across every project rather than letting the program crash.
-*   **Debugging:** Found and fixed a real logic bug in Tic-Tac-Toe (draw-check running before win-check), by tracing execution order and constructing a specific test case to confirm the fix.
+*   **Debugging:** Found and fixed real logic bugs in Tic-Tac-Toe (draw-check running before win-check) and Binary Search (comparing a position to a value instead of the value stored at that position), in both cases by tracing execution step by step and constructing a specific test case to confirm the fix.
+*   **Algorithms:** Implemented binary search from scratch and can explain why it runs in O(log n).
 *   **Version Control:** Managing a multi-file project via Git and GitHub.
 
 ## 🔜 Coming Next
 
 *   **Object-Oriented Programming:** A bank account simulation and a to-do list manager, moving from function-based scripts to classes.
-*   **Binary Search:** Implementing it from scratch and reasoning about why it runs in O(log n).
